@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for device in devices %}
+		<article class="media content-section">
+  		 <div class="media-body">
+          <div class="article-metadata">
+           <a class="mr-2" href="#">{{ device.device }}</a>
+          
+          </div>
+          <h2><a class="article-title" href="#">{{ device.type }}</a></h2>
+          <p class="article-content">with {{ device.OS }}</p>
+        </div>
+      </article>
+    	
+    {% endfor %}
+{% endblock content %}
